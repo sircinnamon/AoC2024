@@ -8,6 +8,10 @@ S = (0,+1)
 W = (-1,0)
 
 def check_route_for_loops(guard, obstacles, prev_visited):
+	gx = guard[0][0]
+	gy = guard[0][1]
+	gdx = guard[1][0]
+	gdy = guard[1][1]
 	visited = prev_visited.copy() # include facing
 	while (guard[0][0] in range(0, len(grid[0]))) and (guard[0][1] in range(0, len(grid))):
 		pos = guard[0]
@@ -64,5 +68,5 @@ while (guard[0][0] in range(0, len(grid[0]))) and (guard[0][1] in range(0, len(g
 	else:
 		guard = (next_pos, guard[1])
 
-print(loop_creators)
+# print(loop_creators)
 print(len(loop_creators))
